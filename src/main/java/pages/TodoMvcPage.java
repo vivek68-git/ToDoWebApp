@@ -83,4 +83,15 @@ public class TodoMvcPage {
 		driver.findElement(By.xpath ("//*[contains(text(),'" + toDoItem + "')]/preceding-sibling::input")).click();
 		driver.findElement(clearComplete).click();
 	}
+	
+	public boolean checkClearCompletedLabel(String label) {
+		try {
+		driver.findElement(By.xpath ("//*[contains(text(),'" + label + "')]"));
+		}
+		catch(Exception e) {
+			return true;
+		}
+		return false;
+		
+	}
 }

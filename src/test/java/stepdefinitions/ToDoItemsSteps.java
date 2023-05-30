@@ -11,7 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.TodoMvcPage;
 
-public class AddToDoItemsSteps {
+public class ToDoItemsSteps {
 
 	private TodoMvcPage todoMvcPage = new TodoMvcPage(DriverFactory.getDriver());
 
@@ -67,6 +67,11 @@ public class AddToDoItemsSteps {
 		for (String completeToDoItem : completeToDoItems) {
 			todoMvcPage.completeToDoItem(completeToDoItem);
 		}
+	}
+	
+	@Then("{string} should not be visible")
+	public void should_not_be_visible(String label) {
+	   Assert.assertTrue(todoMvcPage.checkClearCompletedLabel(label), "Clear Completed Label still present");
 	}
 
 
