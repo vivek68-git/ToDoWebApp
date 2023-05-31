@@ -20,5 +20,5 @@ Run the below Maven command.
 
 Once the execution completes report & log will be generated in below folder.
 
-**Report:** 		*target/report*<br>
-**Log:** 		*target/logs*
+**Report:** 		*test-output-thread*<br>
+**Log:** 		
